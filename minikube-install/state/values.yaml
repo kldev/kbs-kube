@@ -1,0 +1,9 @@
+x-db-access:
+  username: &dbUsername skgijpsbxmxmkruipzfm      
+  password: &dbPassword tqklal9i71uy6shxhi0w      
+  
+kbs-db: 
+  postgresqlUsername: *dbUsername
+  postgresqlPassword: *dbPassword
+  postgresqlDatabase: kbs
+

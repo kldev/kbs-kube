@@ -1,0 +1,1 @@
+helm install -n mk --dry-run --debug . | more

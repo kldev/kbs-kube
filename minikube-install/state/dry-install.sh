@@ -1,0 +1,1 @@
+helm install -n state --dry-run --debug . | more

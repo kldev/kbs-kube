@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "kbs-schema.fullname" . }}-seed
+  labels:
+{{ include "kbs-schema.labels" . | indent 4 }}
+spec:
+  backoffLimit: 5
+  template:
+    spec:
+      containers:
+      - name: kbs-schema
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        args: ["-c","both"]
+        env:
+          - name: "ASPNETCORE_ENVIRONMENT"
+            value: "Production"
+          - name: "ConnectionStrings__Main"
+            value: {{ .Values.config.dbConn | quote }}
+      restartPolicy: OnFailure

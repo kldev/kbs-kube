@@ -1,0 +1,12 @@
+dependencies:
+- name: kbs-front
+  repository: file://../../charts/kbs-front
+  version: 0.1.0
+- name: kbs-api
+  repository: file://../../charts/kbs-api
+  version: 0.1.0
+- name: kbs-schema
+  repository: file://../../charts/kbs-schema
+  version: 0.1.0
+
+

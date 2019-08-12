@@ -1,0 +1,28 @@
+x-db-access:
+  username: &dbUsername skgijpsbxmxmkruipzfm      
+  password: &dbPassword tqklal9i71uy6shxhi0w      
+
+
+kbs-front:
+  image:
+    repository: kbs-front
+    tag: "80291db"
+  ingress:
+    host: 'kbs-front.io'
+
+kbs-api:
+  replicaCount: 2
+  image:
+    repository: kbs-api
+    tag: "bff7949"
+  config:
+    jwtSecret: "vGYO6cAYut9jyV9u77j"
+    dbConn: "Host=state-kbs-db;Database=kbs;Username=skgijpsbxmxmkruipzfm;Password=tqklal9i71uy6shxhi0w"
+    cors: "http://kbs-front.io"
+
+kbs-schema:  
+  image:
+    repository: kbs-schema
+    tag: "bff7949"
+  config:    
+    dbConn: "Host=state-kbs-db;Database=kbs;Username=skgijpsbxmxmkruipzfm;Password=tqklal9i71uy6shxhi0w"    

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "kbs-front.fullname" . }}
+  labels:
+{{ include "kbs-front.labels" . | indent 4 }}
+  
+data:
+  default.conf: |-
+{{ .Values.defaultConf | indent 4 }}
