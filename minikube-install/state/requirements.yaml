@@ -2,4 +2,4 @@ dependencies:
 - name: postgresql  # https://github.com/helm/charts/tree/master/stable/postgresql
   repository: "@stable"
   alias: kbs-db
-  version: 6.2.1
+  version: 8.6.4

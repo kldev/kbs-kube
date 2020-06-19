@@ -6,7 +6,7 @@ x-db-access:
 kbs-front:
   image:
     repository: kbs-front
-    tag: "6c965d9"
+    tag: "753fe2f"
   ingress:
     host: 'kbs-front.io'
 
@@ -14,7 +14,7 @@ kbs-api:
   replicaCount: 2
   image:
     repository: kbs-api
-    tag: "7df8925"
+    tag: "a2c8ee7"
   config:
     jwtSecret: "vGYO6cAYut9jyV9u77j"
     dbConn: "Host=state-kbs-db;Database=kbs;Username=skgijpsbxmxmkruipzfm;Password=tqklal9i71uy6shxhi0w"
@@ -23,6 +23,6 @@ kbs-api:
 kbs-schema:  
   image:
     repository: kbs-schema
-    tag: "7df8925"
+    tag: "a2c8ee7"
   config:    
     dbConn: "Host=state-kbs-db;Database=kbs;Username=skgijpsbxmxmkruipzfm;Password=tqklal9i71uy6shxhi0w"    

@@ -1,1 +1,1 @@
-helm install -n state .
+helm install state .

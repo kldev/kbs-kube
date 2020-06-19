@@ -1,1 +1,1 @@
-helm install -n mk .
+helm install mk .
